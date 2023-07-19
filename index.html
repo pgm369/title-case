@@ -30,7 +30,7 @@
      </header>
      
    <main class="wrapper">
- <p><em>Through the adaptation and enhancement of my existing HTML template, I have successfully crafted a professional and versatile form template. This refined template incorporates a diverse range of form elements and meticulously designed styles, establishing a robust foundation for form-related assignments and future projects. The form template serves as an invaluable resource, streamlining the development process while ensuring a seamless user experience. </em></p>
+ <p><em>Welcome to the Title Case webpage! Crafted by Priscila Garcia-Mendoza, this professional and versatile form template showcases a range of form elements and meticulously designed styles. Its user-friendly interface allows easy input, while the automatic title case conversion enhances the user experience. The webpage features a clean and attractive layout with responsive navigation, ensuring smooth access on various devices. This project not only highlights technical skills in web development but also underscores attention to detail and dedication to creating seamless user experiences. With a focus on usability and aesthetics, the Title Case webpage presents a strong foundation for form-related assignments and future projects. </em></p>
     <h2 class="subheader">Place form code below:</h2>
     <div id="output"> Output Goes Here </div>
     <form method="post" action="" class="main-form">
@@ -55,6 +55,11 @@
   </main>
   <script src="js/main.js"></script>   
   <script>
+
+    function titleCase(str){
+      return str = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    }
+
         const mySubmit = document.querySelector("#submit");
         console.log(mySubmit);
 
@@ -62,7 +67,7 @@
             ev.preventDefault();
             const myInput = document.querySelector("#input");
             const myOutput = document.querySelector("#output");
-            myOutput.innerHTML = myInput.value;
+            myOutput.innerHTML = titleCase(myInput.value);
             //alert(myInput.value);
         });
         
